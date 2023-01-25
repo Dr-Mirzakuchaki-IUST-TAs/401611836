@@ -1,0 +1,1 @@
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/DDS_Serial_Programm.vhi -module DDS_Serial_Programm -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../spi.vhd 

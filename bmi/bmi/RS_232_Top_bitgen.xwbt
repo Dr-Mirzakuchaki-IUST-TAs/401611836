@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\AmirMahdi\Desktop\bmi\bmi\RS_232_Top.ncd
+OUTFILE=C:\Users\AmirMahdi\Desktop\bmi\bmi\RS_232_Top.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Users\AmirMahdi\Desktop\bmi\bmi
+LICENSE=WebPack
+USER_INFO=__0_0_0

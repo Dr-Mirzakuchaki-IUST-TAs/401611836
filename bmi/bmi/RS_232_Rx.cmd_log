@@ -1,0 +1,4 @@
+vhdtdtfi -lib work ../RS_232_Rx.vhd -prj bmi -o RS_232_Rx.spl -module RS_232_Rx -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Rx.vhi -module RS_232_Rx -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../RS_232_Rx.vhd 
+spl2sym -intstyle ise -family spartan6 RS_232_Rx.spl C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Rx.sym 
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Rx.vhi -module RS_232_Rx -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../RS_232_Rx.vhd 

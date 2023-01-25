@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jan 24 23:11:25 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "spi_sck" LOCATE = SITE "P34" LEVEL 1;
+COMP "spi_miso" LOCATE = SITE "P32" LEVEL 1;
+COMP "spi_mosi" LOCATE = SITE "P30" LEVEL 1;
+COMP "LED" LOCATE = SITE "P9" LEVEL 1;
+COMP "clock" LOCATE = SITE "P85" LEVEL 1;
+COMP "spi_ss" LOCATE = SITE "P27" LEVEL 1;
+COMP "uart_Rx" LOCATE = SITE "P40" LEVEL 1;
+COMP "uart_Tx" LOCATE = SITE "P41" LEVEL 1;
+SCHEMATIC END;
+

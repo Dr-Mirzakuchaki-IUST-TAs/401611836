@@ -1,0 +1,8 @@
+NET	"spi_sck"	LOC = p34; 		
+NET	"spi_miso"	LOC = p32;		
+NET	"spi_mosi"	LOC = p30;		
+NET	"spi_ss"		LOC = p27;		
+NET	"clock"		LOC = p85;
+NET	"uart_Tx"	LOC = p41;
+NET	"uart_Rx"	LOC = p40;
+NET	"LED"	LOC = p9;
