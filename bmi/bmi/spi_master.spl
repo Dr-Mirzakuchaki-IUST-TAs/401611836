@@ -1,0 +1,13 @@
+[Inputs]
+miso
+clk
+en_i
+=data_i[7:0]=
+[Outputs]
+mosi
+sck
+ss
+en_o
+busy
+=data_o[7:0]=
+[BiDir]

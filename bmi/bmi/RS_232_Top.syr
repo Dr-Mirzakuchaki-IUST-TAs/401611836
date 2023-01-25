@@ -1,0 +1,537 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: RS_232_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RS_232_Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RS_232_Top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : RS_232_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Tx.vhd" into library work
+Parsing entity <RS_232_Tx>.
+Parsing architecture <Behavioral> of entity <rs_232_tx>.
+Parsing VHDL file "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Rx.vhd" into library work
+Parsing entity <RS_232_Rx>.
+Parsing architecture <Behavioral> of entity <rs_232_rx>.
+Parsing VHDL file "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" into library work
+Parsing entity <RS_232_Top>.
+Parsing architecture <Behavioral> of entity <rs_232_top>.
+WARNING:HDLCompiler:957 - "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" Line 93: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" Line 96: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" Line 99: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" Line 102: Case choice must be a locally static expression
+WARNING:HDLCompiler:957 - "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" Line 105: Case choice must be a locally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <RS_232_Top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RS_232_Tx> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RS_232_Rx> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" Line 24: Net <GPIO_Input_Pin_State[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <RS_232_Top>.
+    Related source file is "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd".
+INFO:Xst:3210 - "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Top.vhd" line 34: Output port <Busy> of the instance <Inst_RS_232_Tx> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'GPIO_Input_Pin_State<7:4>', unconnected in block 'RS_232_Top', is tied to its initial value (0000).
+    Found 1-bit register for signal <Send_Comm>.
+    Found 1-bit register for signal <GPIO_Input_Pin_State<3>>.
+    Found 1-bit register for signal <GPIO_Input_Pin_State<2>>.
+    Found 1-bit register for signal <GPIO_Input_Pin_State<1>>.
+    Found 1-bit register for signal <GPIO_Input_Pin_State<0>>.
+    Found 8-bit register for signal <Tx_Data_In>.
+    Found 4-bit register for signal <Motors>.
+    Found 26-bit register for signal <LED_Delay_Counter>.
+    Found 26-bit adder for signal <LED_Delay_Counter[25]_GND_4_o_add_0_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+Unit <RS_232_Top> synthesized.
+
+Synthesizing Unit <RS_232_Tx>.
+    Related source file is "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Tx.vhd".
+    Found 1-bit register for signal <Send_Int>.
+    Found 1-bit register for signal <Send_Prev>.
+    Found 1-bit register for signal <Serial_Out_Int>.
+    Found 1-bit register for signal <Packet_Generate>.
+    Found 13-bit register for signal <Bit_Width_Count>.
+    Found 4-bit register for signal <Data_Bit_Count>.
+    Found 1-bit register for signal <Busy_Int>.
+    Found 1-bit register for signal <Parity_Bit>.
+    Found 1-bit register for signal <Start_Sending>.
+    Found 12-bit register for signal <Full_Packet>.
+    Found 8-bit register for signal <Data_In_Int>.
+    Found 13-bit adder for signal <Bit_Width_Count[12]_GND_5_o_add_0_OUT> created at line 1241.
+    Found 4-bit adder for signal <Data_Bit_Count[3]_GND_5_o_add_2_OUT> created at line 1241.
+    Found 1-bit 12-to-1 multiplexer for signal <Data_Bit_Count[3]_X_5_o_Mux_8_o> created at line 74.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <RS_232_Tx> synthesized.
+
+Synthesizing Unit <RS_232_Rx>.
+    Related source file is "C:\Users\AmirMahdi\Desktop\bmi\RS_232_Rx.vhd".
+    Found 1-bit register for signal <Rx_Prev>.
+    Found 1-bit register for signal <Valid_Int>.
+    Found 13-bit register for signal <Bit_Width_Count>.
+    Found 4-bit register for signal <Data_Bit_Count>.
+    Found 16-bit register for signal <Data_Out_Int>.
+    Found 1-bit register for signal <Parity_Bit>.
+    Found 1-bit register for signal <Packet_Detection>.
+    Found 1-bit register for signal <Find_Bit_Center_State>.
+    Found 1-bit register for signal <Rx_Int>.
+    Found 13-bit adder for signal <Bit_Width_Count[12]_GND_6_o_add_1_OUT> created at line 1241.
+    Found 4-bit adder for signal <Data_Bit_Count[3]_GND_6_o_add_3_OUT> created at line 1241.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+	inferred  17 Multiplexer(s).
+Unit <RS_232_Rx> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 13-bit adder                                          : 2
+ 26-bit adder                                          : 1
+ 4-bit adder                                           : 2
+# Registers                                            : 28
+ 1-bit register                                        : 18
+ 12-bit register                                       : 1
+ 13-bit register                                       : 2
+ 16-bit register                                       : 1
+ 26-bit register                                       : 1
+ 4-bit register                                        : 3
+ 8-bit register                                        : 2
+# Multiplexers                                         : 18
+ 1-bit 12-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 16
+ 13-bit 2-to-1 multiplexer                             : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <Full_Packet_10> in Unit <Inst_RS_232_Tx> is equivalent to the following FF/Latch, which will be removed : <Full_Packet_11> 
+WARNING:Xst:1426 - The value init of the FF/Latch Full_Packet_10 hinder the constant cleaning in the block Inst_RS_232_Tx.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <Data_In_Int_4> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Data_In_Int_5> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Data_In_Int_6> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Data_In_Int_7> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Full_Packet_0> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_5> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_6> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_7> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_8> has a constant value of 0 in block <Inst_RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Tx_Data_In_4> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Tx_Data_In_5> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Tx_Data_In_6> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Tx_Data_In_7> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <RS_232_Rx>.
+The following registers are absorbed into counter <Bit_Width_Count>: 1 register on signal <Bit_Width_Count>.
+The following registers are absorbed into counter <Data_Bit_Count>: 1 register on signal <Data_Bit_Count>.
+Unit <RS_232_Rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RS_232_Top>.
+The following registers are absorbed into counter <LED_Delay_Counter>: 1 register on signal <LED_Delay_Counter>.
+Unit <RS_232_Top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RS_232_Tx>.
+The following registers are absorbed into counter <Bit_Width_Count>: 1 register on signal <Bit_Width_Count>.
+The following registers are absorbed into counter <Data_Bit_Count>: 1 register on signal <Data_Bit_Count>.
+Unit <RS_232_Tx> synthesized (advanced).
+WARNING:Xst:2677 - Node <Data_Out_Int_8> of sequential type is unconnected in block <RS_232_Rx>.
+WARNING:Xst:2677 - Node <Data_Out_Int_9> of sequential type is unconnected in block <RS_232_Rx>.
+WARNING:Xst:2677 - Node <Data_Out_Int_10> of sequential type is unconnected in block <RS_232_Rx>.
+WARNING:Xst:2677 - Node <Data_Out_Int_11> of sequential type is unconnected in block <RS_232_Rx>.
+WARNING:Xst:2677 - Node <Data_Out_Int_12> of sequential type is unconnected in block <RS_232_Rx>.
+WARNING:Xst:2677 - Node <Data_Out_Int_13> of sequential type is unconnected in block <RS_232_Rx>.
+WARNING:Xst:2677 - Node <Data_Out_Int_14> of sequential type is unconnected in block <RS_232_Rx>.
+WARNING:Xst:2677 - Node <Data_Out_Int_15> of sequential type is unconnected in block <RS_232_Rx>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 5
+ 13-bit up counter                                     : 2
+ 26-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+# Multiplexers                                         : 9
+ 1-bit 12-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 8
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch Full_Packet_10 hinder the constant cleaning in the block RS_232_Tx.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch Full_Packet_11 hinder the constant cleaning in the block RS_232_Tx.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <Full_Packet_0> has a constant value of 0 in block <RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Tx_Data_In_4> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Tx_Data_In_5> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Tx_Data_In_6> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Tx_Data_In_7> has a constant value of 0 in block <RS_232_Top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Full_Packet_10> in Unit <RS_232_Tx> is equivalent to the following FF/Latch, which will be removed : <Full_Packet_11> 
+INFO:Xst:2261 - The FF/Latch <Data_In_Int_4> in Unit <RS_232_Tx> is equivalent to the following 3 FFs/Latches, which will be removed : <Data_In_Int_5> <Data_In_Int_6> <Data_In_Int_7> 
+WARNING:Xst:1293 - FF/Latch <Data_In_Int_4> has a constant value of 0 in block <RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_5> has a constant value of 0 in block <RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_6> has a constant value of 0 in block <RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_7> has a constant value of 0 in block <RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Full_Packet_8> has a constant value of 0 in block <RS_232_Tx>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <RS_232_Top> ...
+
+Optimizing unit <RS_232_Tx> ...
+
+Optimizing unit <RS_232_Rx> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RS_232_Top, actual ratio is 2.
+
+Final Macro Processing ...
+
+Processing Unit <RS_232_Top> :
+	Found 2-bit shift register for signal <Tx_Data_In_0>.
+	Found 2-bit shift register for signal <Tx_Data_In_1>.
+	Found 2-bit shift register for signal <Tx_Data_In_2>.
+	Found 2-bit shift register for signal <Tx_Data_In_3>.
+	Found 2-bit shift register for signal <Inst_RS_232_Tx/Send_Int>.
+Unit <RS_232_Top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 94
+ Flip-Flops                                            : 94
+# Shift Registers                                      : 5
+ 2-bit shift register                                  : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : RS_232_Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 234
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 49
+#      LUT2                        : 18
+#      LUT3                        : 24
+#      LUT4                        : 5
+#      LUT5                        : 4
+#      LUT6                        : 26
+#      MUXCY                       : 49
+#      VCC                         : 1
+#      XORCY                       : 52
+# FlipFlops/Latches                : 95
+#      FD                          : 53
+#      FDE                         : 20
+#      FDR                         : 14
+#      FDRE                        : 8
+# Shift Registers                  : 5
+#      SRLC16E                     : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 5
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              95  out of  11440     0%  
+ Number of Slice LUTs:                  136  out of   5720     2%  
+    Number used as Logic:               131  out of   5720     2%  
+    Number used as Memory:                5  out of   1440     0%  
+       Number used as SRL:                5
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    144
+   Number with an unused Flip Flop:      49  out of    144    34%  
+   Number with an unused LUT:             8  out of    144     5%  
+   Number of fully used LUT-FF pairs:    87  out of    144    60%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    102    11%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | BUFGP                  | 100   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.496ns (Maximum Frequency: 181.950MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 5.496ns (frequency: 181.951MHz)
+  Total number of paths / destination ports: 1527 / 147
+-------------------------------------------------------------------------
+Delay:               5.496ns (Levels of Logic = 4)
+  Source:            Inst_RS_232_Rx/Bit_Width_Count_11 (FF)
+  Destination:       Inst_RS_232_Rx/Bit_Width_Count_12 (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock rising
+
+  Data Path: Inst_RS_232_Rx/Bit_Width_Count_11 to Inst_RS_232_Rx/Bit_Width_Count_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.525   0.994  Inst_RS_232_Rx/Bit_Width_Count_11 (Inst_RS_232_Rx/Bit_Width_Count_11)
+     LUT3:I0->O            1   0.235   0.682  Inst_RS_232_Rx/Bit_Width_Count[12]_PWR_6_o_equal_3_o<12>2_SW0 (N7)
+     LUT6:I5->O           15   0.254   1.155  Inst_RS_232_Rx/Bit_Width_Count[12]_PWR_6_o_equal_3_o<12>2 (Inst_RS_232_Rx/Bit_Width_Count[12]_PWR_6_o_equal_3_o<12>2)
+     LUT6:I5->O           12   0.254   1.069  Inst_RS_232_Rx/Bit_Width_Count[12]_PWR_6_o_equal_3_o_0 (Inst_RS_232_Rx/Bit_Width_Count[12]_PWR_6_o_equal_3_o_0)
+     LUT2:I1->O            1   0.254   0.000  Inst_RS_232_Rx/Bit_Width_Count_12_rstpot (Inst_RS_232_Rx/Bit_Width_Count_12_rstpot)
+     FD:D                      0.074          Inst_RS_232_Rx/Bit_Width_Count_12
+    ----------------------------------------
+    Total                      5.496ns (1.596ns logic, 3.900ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            Rx (PAD)
+  Destination:       Inst_RS_232_Rx/Rx_Int (FF)
+  Destination Clock: Clock rising
+
+  Data Path: Rx to Inst_RS_232_Rx/Rx_Int
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  Rx_IBUF (Rx_IBUF)
+     FD:D                      0.074          Inst_RS_232_Rx/Rx_Int
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            Motors_3 (FF)
+  Destination:       Motors<3> (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: Motors_3 to Motors<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.525   0.725  Motors_3 (Motors_3)
+     OBUF:I->O                 2.912          Motors_3_OBUF (Motors<3>)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    5.496|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.17 secs
+ 
+--> 
+
+Total memory usage is 4502540 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   41 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -1,0 +1,7 @@
+[Inputs]
+Clock
+Serial_In
+[Outputs]
+Valid
+=Data_Out[7:0]=
+[BiDir]

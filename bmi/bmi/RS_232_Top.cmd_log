@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Top.xst" -ofn "C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 RS_232_Top.ngc RS_232_Top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RS_232_Top_map.ncd RS_232_Top.ngd RS_232_Top.pcf 
+par -w -intstyle ise -ol high -mt off RS_232_Top_map.ncd RS_232_Top.ncd RS_232_Top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml RS_232_Top.twx RS_232_Top.ncd -o RS_232_Top.twr RS_232_Top.pcf 
+bitgen -intstyle ise -f RS_232_Top.ut RS_232_Top.ncd 
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Top.vhi -module RS_232_Top -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../RS_232_Tx.vhd -lib work ../RS_232_Rx.vhd -lib work ../RS_232_Top.vhd 

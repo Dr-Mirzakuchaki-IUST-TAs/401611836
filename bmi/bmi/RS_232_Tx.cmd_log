@@ -1,0 +1,2 @@
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Tx.vhi -module RS_232_Tx -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../RS_232_Tx.vhd 
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/RS_232_Tx.vhi -module RS_232_Tx -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../RS_232_Tx.vhd 

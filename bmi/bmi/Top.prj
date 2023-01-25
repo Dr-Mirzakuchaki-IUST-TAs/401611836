@@ -1,0 +1,4 @@
+vhdl work "../spi_master.vhd"
+vhdl work "../RS_232_Tx.vhd"
+vhdl work "../RS_232_Rx.vhd"
+vhdl work "Top.vhd"

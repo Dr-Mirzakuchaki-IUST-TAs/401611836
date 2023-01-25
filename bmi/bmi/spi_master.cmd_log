@@ -1,0 +1,5 @@
+vhdtdtfi -lib work ../spi_master.vhd -prj bmi -o spi_master.spl -module spi_master -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 spi_master.spl C:/Users/AmirMahdi/Desktop/bmi/bmi/spi_master.sym 
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/spi_master.vhi -module spi_master -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../spi_master.vhd 
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/spi_master.vhi -module spi_master -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../spi_master.vhd 
+vhdtdtfi -prj bmi -o C:/Users/AmirMahdi/Desktop/bmi/bmi/spi_master.vhi -module spi_master -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../spi_master.vhd 
